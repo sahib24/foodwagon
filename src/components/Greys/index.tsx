@@ -1,0 +1,43 @@
+import Image from "next/image";
+
+export default function DiscountCardGrid() {
+  return (
+    <div className=" max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4 pt-10">
+      <div className="rounded-lg  ">
+        <Image src="/Greys/1.png" alt="15% Off" width={400} height={200} />
+
+        <p className="font-semibold text-gray-800 mt-6">Greys Vage</p>
+        <p className="text-sm text-orange-600 bg-orange-100 px-2 py-1 inline-block rounded mt-2 font-semibold">
+          6 Days Remaining
+        </p>
+      </div>
+
+      <div className="rounded-lg  ">
+        <Image src="/Greys/2.png" alt="15% Off" width={400} height={200} />
+
+        <p className="font-semibold text-gray-800 mt-6">Greys Vage</p>
+        <p className="text-sm text-orange-600 bg-orange-100 px-2 py-1 inline-block rounded mt-2 font-semibold">
+          6 Days Remaining
+        </p>
+      </div>
+
+      <div className="rounded-lg  ">
+        <Image src="/Greys/3.png" alt="15% Off" width={400} height={200} />
+
+        <p className="font-semibold text-gray-800 mt-6">Greys Vage</p>
+        <p className="text-sm text-orange-600 bg-orange-100 px-2 py-1 inline-block rounded mt-2 font-semibold">
+          7 Days Remaining
+        </p>
+      </div>
+
+      <div className="rounded-lg  ">
+        <Image src="/Greys/4.png" alt="15% Off" width={400} height={200} />
+
+        <p className="font-semibold text-gray-800 mt-6">Greys Vage</p>
+        <p className="text-sm text-orange-600 bg-orange-100 px-2 py-1 inline-block rounded mt-2 font-semibold">
+          8 Days Remaining
+        </p>
+      </div>
+    </div>
+  );
+}
