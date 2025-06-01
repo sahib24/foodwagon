@@ -1,87 +1,163 @@
 "use client";
-import React from "react";
-import Image from "next/image";
+
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Image from "next/image";
 
-const items = [
-  {
-    name: "Cheese Burger",
-    place: "Burger Arena",
-    price: "$3.88",
-    image: "/images/burger.jpg",
-  },
-  {
-    name: "Toffe's Cake",
-    place: "Top Sticks",
-    price: "$4.00",
-    image: "/images/cake.jpg",
-  },
-  {
-    name: "Dancake",
-    place: "Cake World",
-    price: "$1.99",
-    image: "/images/dancake.jpg",
-  },
-  {
-    name: "Crispy Sandwitch",
-    place: "Fastfood Dine",
-    price: "$3.00",
-    image: "/images/sandwich.jpg",
-  },
-  {
-    name: "Thai Soup",
-    place: "Foody man",
-    price: "$2.79",
-    image: "/images/soup.jpg",
-  },
-  {
-    name: "Toffe's Cake",
-    place: "Top Sticks",
-    price: "$4.00",
-    image: "/images/cake.jpg",
-  },
-];
+const CustomSwiper = () => {
+  const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
+  const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
 
-export default function PopularItems() {
+  const prevRef = (node: HTMLElement | null) => {
+    if (node !== null) setPrevEl(node);
+  };
+
+  const nextRef = (node: HTMLElement | null) => {
+    if (node !== null) setNextEl(node);
+  };
+
   return (
-    <div className="px-4 py-10 bg-white max-w-screen-xl mx-auto">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-        Popular items
+    <div className="relative custom-container py-6 px-4 sm:px-6 md:px-8">
+      <h2 className="text-2xl md:text-3xl font-bold text-center py-8">
+        Propular Items
       </h2>
+      <div className="absolute top-1/2 left-1 lg:left-1 xl:left-6 z-10">
+        <button
+          ref={prevRef}
+          className="text-white w-fit h-auto rounded-full flex items-center justify-center"
+        >
+          <Image
+            src="/search/left.png"
+            alt="Left"
+            width={60}
+            height={60}
+            className=""
+          />
+        </button>
+      </div>
+
+      <div className="absolute top-1/2 right-1 lg:right-1 xl:right-6 z-10 ">
+        <button
+          ref={nextRef}
+          className="text-white w-fit h-auto rounded-full flex items-center justify-center"
+        >
+          <Image
+            src="/search/right.png"
+            alt="Right"
+            width={60}
+            height={60}
+            className=""
+          />
+        </button>
+      </div>
+
       <Swiper
-        modules={[Autoplay, Navigation]}
-        navigation
-        autoplay={{ delay: 3000 }}
-        loop={true}
-        spaceBetween={20}
-        breakpoints={{
-          320: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
-          1536: { slidesPerView: 5 },
+        modules={[Navigation, Autoplay]}
+        navigation={{
+          prevEl,
+          nextEl,
         }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        spaceBetween={15}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          600: {
+            slidesPerView: 2,
+          },
+          700: {
+            slidesPerView: 2,
+          },
+          800: {
+            slidesPerView: 3,
+          },
+          1280: {
+            slidesPerView: 5,
+          },
+        }}
+        onSwiper={(swiper) => {
+          setTimeout(() => swiper.navigation.update(), 100);
+        }}
+        className="py-6 "
       >
-        {items.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="rounded-lg shadow-lg overflow-hidden bg-white">
+        {[
+          {
+            id: 1,
+            name: "Cheese Burger",
+            restaurant: "Burger Arena",
+            price: "$3.88",
+            image: "/propular/1.png",
+          },
+          {
+            id: 2,
+            name: "Toffes Cake",
+            restaurant: "Top Sticks",
+            price: "$4.00",
+            image: "/propular/2.png",
+          },
+          {
+            id: 3,
+            name: "Dancake",
+            restaurant: "Cake World",
+            price: "$1.99",
+            image: "/propular/3.png",
+          },
+          {
+            id: 4,
+            name: "Crispy Sandwich",
+            restaurant: "Fastfood Dine",
+            price: "$3.00",
+            image: "/propular/4.png",
+          },
+          {
+            id: 5,
+            name: "Thai Soup",
+            restaurant: "Foody man",
+            price: "$2.79",
+            image: "/propular/5.png",
+          },
+          {
+            id: 6,
+            name: "New Dish",
+            restaurant: "Tasty Hub",
+            price: "$3.50",
+            image: "/propular/2.png",
+          },
+        ].map((item) => (
+          <SwiperSlide key={item.id}>
+            <div className="bg-white px-10 lg:px-3 xl:px-0 rounded-xl p-3 ">
               <Image
                 src={item.image}
                 alt={item.name}
-                width={500}
-                height={300}
-                className="w-full h-48 object-cover"
+                width={200}
+                height={150}
+                className="rounded-lg w-full h-full  object-cover mb-2"
               />
-              <div className="p-4">
-                <h3 className="font-semibold text-lg">{item.name}</h3>
-                <p className="text-sm text-gray-500">{item.place}</p>
-                <p className="text-base font-semibold text-gray-800 mt-2">
+              <div className="px-1">
+                <h3 className="text-md font-semibold mb-1 text-left">
+                  {item.name}
+                </h3>
+                <div className="text-sm text-yellow-600 flex items-center gap-1 mb-1 text-left">
+                  <Image
+                    src="/loca.png"
+                    alt="location"
+                    width={14}
+                    height={14}
+                  />
+                  <span>{item.restaurant}</span>
+                </div>
+                <p className="text-base font-bold mb-2 text-gray-800 text-left">
                   {item.price}
                 </p>
-                <button className="mt-4 w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition duration-300">
+                <button className="bg-gradient-to-b from-[#FF7A7A] via-[#FB693B] to-[#F65900] cursor-pointer text-white py-2 rounded  text-sm font-medium w-full">
                   Order Now
                 </button>
               </div>
@@ -91,4 +167,6 @@ export default function PopularItems() {
       </Swiper>
     </div>
   );
-}
+};
+
+export default CustomSwiper;

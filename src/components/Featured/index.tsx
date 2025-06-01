@@ -1,167 +1,146 @@
-"use client";
-
 import Image from "next/image";
 
-export default function FeaturedRestaurants() {
+const FeaturedRestaurants = () => {
+  const restaurants = [
+    {
+      id: 1,
+      name: "Foodworld",
+      image: "/featured/1.png",
+      logo: "/featured/a.png",
+      rating: 46,
+      offer: "20% off",
+      status: "Opens tomorrow",
+    },
+    {
+      id: 2,
+      name: "Pizzahub",
+      image: "/featured/2.png",
+      logo: "/featured/b.png",
+      rating: 40,
+      offer: "15% off",
+      status: "Opens tomorrow",
+    },
+    {
+      id: 3,
+      name: "Donuts hut",
+      image: "/featured/3.png",
+      logo: "/featured/c.png",
+      rating: 20,
+      offer: "10% off",
+      status: "Open Now",
+    },
+    {
+      id: 4,
+      name: "Subway",
+      image: "/featured/4.png",
+      logo: "/featured/d.png",
+      rating: 50,
+      offer: "15% off",
+      status: "Open Now",
+    },
+    {
+      id: 5,
+      name: "Ruby Tuesday",
+      image: "/featured/5.png",
+      logo: "/featured/e.png",
+      rating: 26,
+      offer: "10% off",
+      status: "Open Now",
+    },
+    {
+      id: 6,
+      name: "Kuakata Fried Chicken",
+      image: "/featured/6.png",
+      logo: "/featured/f.png",
+      rating: 53,
+      offer: "25% off",
+      status: "Open Now",
+    },
+    {
+      id: 7,
+      name: "Red Square",
+      image: "/featured/7.png",
+      logo: "/featured/g.png",
+      rating: 45,
+      offer: "10% off",
+      status: "Open Now",
+    },
+    {
+      id: 8,
+      name: "Taco Bell",
+      image: "/featured/8.png",
+      logo: "/featured/h.png",
+      rating: 35,
+      offer: "10% off",
+      status: "Open Now",
+    },
+  ];
+
   return (
-    <section className="py-12 px-4 max-w-7xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-6">
+    <div className="custom-container py-10">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
         Featured Restaurants
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {/* Foodworld */}
-        <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-          <div className="relative">
-            <Image
-              src="/images/food1.jpg"
-              alt="Foodworld"
-              width={500}
-              height={300}
-              className="w-full h-48 object-cover"
-            />
-            <div className="absolute top-2 left-2 space-y-1">
-              <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded">
-                20% off
-              </span>
-              <span className="bg-yellow-400 text-white text-xs px-2 py-1 rounded">
-                Fast
-              </span>
-            </div>
-          </div>
-          <div className="p-4 space-y-2">
-            <div className="flex items-center gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {restaurants.map((restaurant) => (
+          <div key={restaurant.id} className="rounded overflow-hidden">
+            <div className="relative mb-6">
               <Image
-                src="/images/foodworld.png"
-                alt="Foodworld logo"
-                width={24}
-                height={24}
+                src={restaurant.image}
+                alt={restaurant.name}
+                width={500}
+                height={300}
+                className="w-full h-full rounded"
               />
-              <h3 className="text-sm font-semibold">Foodworld</h3>
+              <div className="absolute top-3 left-3 space-x-2 flex">
+                <span className="bg-orange-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                  {restaurant.offer}
+                </span>
+                <span className="bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded">
+                  Fast
+                </span>
+              </div>
             </div>
-            <p className="text-yellow-500 text-sm font-semibold">⭐ 46</p>
-            <p className="text-xs font-medium inline-block px-2 py-1 rounded bg-orange-100 text-orange-600">
-              Opens tomorrow
-            </p>
-          </div>
-        </div>
 
-        {/* Pizzahub */}
-        <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-          <div className="relative">
-            <Image
-              src="/images/food2.jpg"
-              alt="Pizzahub"
-              width={500}
-              height={300}
-              className="w-full h-48 object-cover"
-            />
-            <div className="absolute top-2 left-2 space-y-1">
-              <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded">
-                15% off
-              </span>
-              <span className="bg-yellow-400 text-white text-xs px-2 py-1 rounded">
-                Fast
-              </span>
-            </div>
-          </div>
-          <div className="p-4 space-y-2">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 mb-6">
               <Image
-                src="/images/pizzahub.png"
-                alt="Pizzahub logo"
-                width={24}
-                height={24}
+                src={restaurant.logo}
+                alt={`${restaurant.name} Logo`}
+                width={50}
+                height={50}
+                className="rounded"
               />
-              <h3 className="text-sm font-semibold">Pizzahub</h3>
+              <div>
+                <span className="text-sm font-semibold block">
+                  {restaurant.name}
+                </span>
+                <div className="flex items-center gap-1 text-yellow-500 text-sm">
+                  <span>★</span>
+                  <span>{restaurant.rating}</span>
+                </div>
+              </div>
             </div>
-            <p className="text-yellow-500 text-sm font-semibold">⭐ 40</p>
-            <p className="text-xs font-medium inline-block px-2 py-1 rounded bg-orange-100 text-orange-600">
-              Opens tomorrow
-            </p>
+            <span
+              className={`text-xs font-medium px-2 py-1 rounded ${
+                restaurant.status === "Open Now"
+                  ? "bg-green-100 text-green-600"
+                  : "bg-orange-100 text-orange-500"
+              }`}
+            >
+              {restaurant.status}
+            </span>
           </div>
-        </div>
-
-        {/* Donuts hut - Dunkin */}
-        <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-          <div className="relative">
-            <Image
-              src="/images/food3.jpg"
-              alt="Donuts hut"
-              width={500}
-              height={300}
-              className="w-full h-48 object-cover"
-            />
-            <div className="absolute top-2 left-2 space-y-1">
-              <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded">
-                10% off
-              </span>
-              <span className="bg-yellow-400 text-white text-xs px-2 py-1 rounded">
-                Fast
-              </span>
-            </div>
-          </div>
-          <div className="p-4 space-y-2">
-            <div className="flex items-center gap-2">
-              <Image
-                src="/images/dunkin.png"
-                alt="Dunkin logo"
-                width={24}
-                height={24}
-              />
-              <h3 className="text-sm font-semibold">Donuts hut</h3>
-            </div>
-            <p className="text-yellow-500 text-sm font-semibold">⭐ 20</p>
-            <p className="text-xs font-medium inline-block px-2 py-1 rounded bg-green-100 text-green-600">
-              Open Now
-            </p>
-          </div>
-        </div>
-
-        {/* Donuts hut - Subway */}
-        <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-          <div className="relative">
-            <Image
-              src="/images/food4.jpg"
-              alt="Donuts hut"
-              width={500}
-              height={300}
-              className="w-full h-48 object-cover"
-            />
-            <div className="absolute top-2 left-2 space-y-1">
-              <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded">
-                15% off
-              </span>
-              <span className="bg-yellow-400 text-white text-xs px-2 py-1 rounded">
-                Fast
-              </span>
-            </div>
-          </div>
-          <div className="p-4 space-y-2">
-            <div className="flex items-center gap-2">
-              <Image
-                src="/images/subway.png"
-                alt="Subway logo"
-                width={24}
-                height={24}
-              />
-              <h3 className="text-sm font-semibold">Donuts hut</h3>
-            </div>
-            <p className="text-yellow-500 text-sm font-semibold">⭐ 50</p>
-            <p className="text-xs font-medium inline-block px-2 py-1 rounded bg-green-100 text-green-600">
-              Open Now
-            </p>
-          </div>
-        </div>
-
-        {/* বাকিগুলো চাইলে একইভাবে add করতে পারো */}
+        ))}
       </div>
 
-      <div className="mt-8 flex justify-center">
-        <button className="bg-yellow-400 text-white px-6 py-2 rounded-full font-semibold hover:bg-yellow-500 transition">
-          View All &rarr;
+      <div className="text-center mt-10">
+        <button className="bg-gradient-to-r cursor-pointer from-yellow-400 mb-6 to-orange-400 text-white font-semibold px-6 py-2 rounded hover:scale-105 transition">
+          View All &gt;
         </button>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default FeaturedRestaurants;

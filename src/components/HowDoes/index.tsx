@@ -7,7 +7,7 @@ export default function HowItWorks() {
         How does it work
       </h2>
 
-      <div className=" max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4 md:px-12 text-gray-700">
+      <div className="custom-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4 md:px-12 text-gray-700">
         <div className="flex flex-col items-center">
           <Image
             src="/HowDoes/1.png"

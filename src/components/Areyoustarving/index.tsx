@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <div className="bg-[url('/AreYou.png')] bg-cover bg-center w-full h-[500px]">
-      <div className="max-w-6xl mx-auto text-left space-y-6 px-6 py-16 md:px-12 md:py-24">
+      <div className=" space-y-6 custom-container  py-16  md:py-24 flex flex-col  h-full">
         <h1 className="text-3xl md:text-5xl font-bold text-white">
           Are you starving?
         </h1>
@@ -13,9 +13,9 @@ export default function Navbar() {
           Within a few clicks, find meals that are accessible near you
         </p>
 
-        <div className="bg-white rounded-xl p-6 md:p-7 flex flex-col w-full max-w-2xl space-y-4">
-          <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
-            <button className="flex items-center gap-1 px-4 py-2 rounded-md text-[#FB693B] bg-orange-100 font-medium text-sm shadow justify-center">
+        <div className="bg-white rounded-xl p-6 flex flex-col w-full max-w-[630px] space-y-4 mx-auto lg:mx-0 ">
+          <div className="flex flex-row justify-start space-x-4">
+            <button className="flex items-center gap-1 px-4 py-2 rounded-md text-[#FB693B] bg-orange-100 font-medium text-sm shadow">
               <Image
                 src="/AreYou/bike.png"
                 alt="delivery icon"
@@ -24,7 +24,7 @@ export default function Navbar() {
               />
               Delivery
             </button>
-            <button className="flex items-center gap-1 px-4 py-2 rounded-md text-gray-600 font-medium text-sm  bg-white justify-center">
+            <button className="flex items-center gap-1 px-4 py-2 rounded-md text-gray-600 font-medium text-sm bg-white">
               <Image
                 src="/AreYou/haturi.png"
                 alt="pickup icon"
@@ -35,8 +35,8 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2 w-full space-y-3 sm:space-y-0">
-            <div className="flex items-center sm:w-[500px] bg-gray-100 rounded-lg px-4 py-2 gap-2">
+          <div className="flex flex-row items-center gap-2 w-full justify-center flex-wrap sm:flex-nowrap">
+            <div className="flex items-center w-full sm:w-[450px] bg-gray-100 rounded-lg px-4 py-2 gap-2">
               <Image
                 src="/AreYou/location.png"
                 alt="location icon"
@@ -46,10 +46,10 @@ export default function Navbar() {
               <input
                 type="text"
                 placeholder="Enter Your Address"
-                className="bg-transparent  outline-none text-gray-700 text-sm"
+                className="bg-transparent outline-none text-gray-700 text-sm w-full"
               />
             </div>
-            <button className="bg-[#FB693B] hover:bg-orange-600 flex items-center justify-center text-white px-2 py-2 rounded-lg font-medium gap-1 text-[14px]">
+            <button className="bg-gradient-to-b from-[#FF7A7A] cursor-pointer via-[#FB693B] to-[#F65900] flex items-center justify-center text-white py-2 rounded font-medium gap-1 text-[16px] px-4">
               <Image
                 src="/AreYou/search.png"
                 alt="search icon"
