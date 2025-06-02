@@ -1,21 +1,33 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 
 export default function Navbar() {
+  const [selectedOption, setSelectedOption] = useState("delivery");
+
   return (
     <div className="bg-[url('/AreYou.png')] bg-cover bg-center w-full h-[500px]">
-      <div className=" space-y-6 custom-container  py-16  md:py-24 flex flex-col  h-full">
-        <h1 className="text-3xl md:text-5xl font-bold text-white">
-          Are you starving?
-        </h1>
-        <p className="text-sm md:text-base ">
-          Within a few clicks, find meals that are accessible near you
-        </p>
+      <div className="space-y-6 custom-container py-16 md:py-24 flex flex-col h-full">
+        <div className="w-full max-w-[630px] mx-auto lg:mx-0 text-center md:text-left">
+          <h1 className="text-3xl md:text-5xl font-bold text-white">
+            Are you starving?
+          </h1>
+          <p className="text-sm md:text-md mt-5">
+            Within a few clicks, find meals that are accessible near you
+          </p>
+        </div>
 
-        <div className="bg-white rounded-xl p-6 flex flex-col w-full max-w-[630px] space-y-4 mx-auto lg:mx-0 ">
+        <div className="bg-white rounded-xl p-6 flex flex-col w-full max-w-[630px] space-y-4 mx-auto lg:mx-0">
           <div className="flex flex-row justify-start space-x-4">
-            <button className="flex items-center gap-1 px-4 py-2 rounded-md text-[#FB693B] bg-orange-100 font-medium text-sm shadow">
+            <button
+              onClick={() => setSelectedOption("delivery")}
+              className={`flex items-center gap-1 px-4 py-2 rounded-md font-medium text-sm  ${
+                selectedOption === "delivery"
+                  ? "text-[#FB693B] bg-orange-100"
+                  : "text-gray-600 bg-white"
+              }`}
+            >
               <Image
                 src="/AreYou/bike.png"
                 alt="delivery icon"
@@ -24,7 +36,15 @@ export default function Navbar() {
               />
               Delivery
             </button>
-            <button className="flex items-center gap-1 px-4 py-2 rounded-md text-gray-600 font-medium text-sm bg-white">
+
+            <button
+              onClick={() => setSelectedOption("pickup")}
+              className={`flex items-center gap-1 px-4 py-2 rounded-md font-medium text-sm  ${
+                selectedOption === "pickup"
+                  ? "text-[#FB693B] bg-orange-100"
+                  : "text-gray-600 bg-white"
+              }`}
+            >
               <Image
                 src="/AreYou/haturi.png"
                 alt="pickup icon"

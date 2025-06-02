@@ -91,7 +91,7 @@ const FeaturedRestaurants = () => {
                 alt={restaurant.name}
                 width={500}
                 height={300}
-                className="w-full h-full rounded"
+                className="w-full h-full rounded hover:scale-105 transition duration-300"
               />
               <div className="absolute top-3 left-3 space-x-2 flex">
                 <span className="bg-orange-500 text-white text-xs font-semibold px-2 py-1 rounded">
@@ -135,7 +135,7 @@ const FeaturedRestaurants = () => {
       </div>
 
       <div className="text-center mt-10">
-        <button className="bg-gradient-to-r cursor-pointer from-yellow-400 mb-6 to-orange-400 text-white font-semibold px-6 py-2 rounded hover:scale-105 transition">
+        <button className="bg-gradient-to-r cursor-pointer from-yellow-400 mb-6 to-orange-400 text-white font-semibold px-6 py-2 rounded   ">
           View All &gt;
         </button>
       </div>

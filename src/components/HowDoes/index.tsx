@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HowItWorks() {
   return (
     <section className="bg-gradient-to-b from-[#ffcf6720] to-[#ffffff28] py-12 text-center">
-      <h2 className="text-2xl font-bold text-[#F17228] mb-12">
+      <h2 className="text-3xl font-bold text-[#F17228] mb-12">
         How does it work
       </h2>
 
@@ -16,7 +16,7 @@ export default function HowItWorks() {
             height={50}
           />
 
-          <h3 className="font-semibold mb-2">Select location</h3>
+          <h3 className=" text-xl font-bold mb-2">Select location</h3>
           <p className="text-sm text-gray-600 max-w-xs">
             Choose the location where your food will be delivered.
           </p>
@@ -30,7 +30,7 @@ export default function HowItWorks() {
             height={50}
           />
 
-          <h3 className="font-semibold mb-2">Choose order</h3>
+          <h3 className="text-xl font-bold mb-2">Choose order</h3>
           <p className="text-sm text-gray-600 max-w-xs">
             Check over hundreds of menus to pick your favorite food.
           </p>
@@ -44,7 +44,7 @@ export default function HowItWorks() {
             height={50}
           />
 
-          <h3 className="font-semibold mb-2">Pay advanced</h3>
+          <h3 className="text-xl font-bold mb-2">Pay advanced</h3>
           <p className="text-sm text-gray-600 max-w-xs">
             It&apos;s quick, safe, and simple. Select several methods of
             payment.
@@ -59,7 +59,7 @@ export default function HowItWorks() {
             height={50}
           />
 
-          <h3 className="font-semibold mb-2 mt-3">Enjoy meals</h3>
+          <h3 className="text-xl font-bold mb-2 mt-3">Enjoy meals</h3>
           <p className="text-sm text-gray-600 max-w-xs">
             Food is made and delivered directly to your home.
           </p>

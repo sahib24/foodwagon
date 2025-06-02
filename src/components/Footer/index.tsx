@@ -55,8 +55,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between py-10">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="flex flex-col-reverse md:flex-row justify-between sm:gap-10 py-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:mb-0 mb-8 w-full md:w-2/3">
             <div>
               <h5 className="text-[20px] text-white mb-4">Company</h5>
               <ul className="space-y-1">
@@ -85,7 +85,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="w-full md:w-1/3">
+          <div className="w-full md:w-1/3 mb-8 md:mb-0">
             <h5 className="font-semibold text-white mb-3">FOLLOW US</h5>
             <div className="flex space-x-4 text-white text-lg mb-5">
               <FaInstagram />

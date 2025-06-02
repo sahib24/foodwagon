@@ -27,7 +27,7 @@ const CustomSwiper = () => {
       <div className="absolute top-1/2 left-1 lg:left-1 xl:left-6 z-10">
         <button
           ref={prevRef}
-          className="text-white w-fit h-auto rounded-full flex items-center justify-center"
+          className="text-white w-fit h-auto rounded-full flex items-center justify-center cursor-pointer"
         >
           <Image
             src="/search/left.png"
@@ -42,7 +42,7 @@ const CustomSwiper = () => {
       <div className="absolute top-1/2 right-1 lg:right-1 xl:right-6 z-10 ">
         <button
           ref={nextRef}
-          className="text-white w-fit h-auto rounded-full flex items-center justify-center"
+          className="text-white w-fit h-auto rounded-full flex items-center justify-center cursor-pointer"
         >
           <Image
             src="/search/right.png"

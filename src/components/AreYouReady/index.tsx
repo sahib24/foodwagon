@@ -7,7 +7,7 @@ const OrderBanner = () => {
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:w-[500px]">
           Are you ready to order with the best deals?
         </h1>
-        <button className="mt-4 px-6 py-2 bg-gradient-to-b from-[#FF7A7A] via-[#FB693B] to-[#F65900] hover:scale-105 transition text-white font-semibold rounded cursor-pointer">
+        <button className="mt-4 px-6 py-2 bg-gradient-to-b from-[#FF7A7A] via-[#FB693B] to-[#F65900]  text-white font-semibold rounded cursor-pointer">
           PROCEED TO ORDER
         </button>
       </div>
