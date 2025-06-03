@@ -20,26 +20,38 @@ const CustomSwiper = () => {
   };
 
   return (
-    <div className="relative custom-container py-6 px-4 sm:px-6 md:px-8">
+    <div className="relative custom-container py-6 ">
       <h2 className="text-2xl md:text-3xl font-bold text-center py-8">
         Propular Items
       </h2>
 
-      <div className="absolute top-1/2 left-1 lg:left-1 xl:left-6 z-10 -translate-y-1/2">
+      <div className="absolute top-1/2  xl:left-8 md:left-0 z-10 -left-3 ">
         <button
           ref={prevRef}
           className="text-white w-fit h-auto rounded-full flex items-center justify-center cursor-pointer"
         >
-          <Image src="/search/left.png" alt="Left" width={60} height={60} />
+          <Image
+            src="/search/left.png"
+            alt="Left"
+            width={60}
+            height={60}
+            className="w-15 h-15 bg-[#FFB20E] rounded-full p-6 hover:custom-shadow:hover"
+          />
         </button>
       </div>
 
-      <div className="absolute top-1/2 right-1 lg:right-1 xl:right-6 z-10 -translate-y-1/2">
+      <div className="absolute top-1/2 xl:right-8 md:right-0 z-10 -right-3 hover:custom-shadow:hover">
         <button
           ref={nextRef}
-          className="text-white w-fit h-auto rounded-full flex items-center justify-center cursor-pointer"
+          className="text-white w-fit h-auto rounded-full flex items-center justify-center cursor-pointer "
         >
-          <Image src="/search/right.png" alt="Right" width={60} height={60} />
+          <Image
+            src="/search/right.png"
+            alt="Right"
+            width={60}
+            height={60}
+            className="w-15 h-15 bg-[#FFB20E] rounded-full p-6 hover:custom-shadow:hover"
+          />
         </button>
       </div>
 
@@ -54,11 +66,11 @@ const CustomSwiper = () => {
           disableOnInteraction: false,
         }}
         loop={true}
-        spaceBetween={16}
+        spaceBetween={12}
         breakpoints={{
           0: {
-            slidesPerView: 1,
-            spaceBetween: 12,
+            slidesPerView: 2,
+            spaceBetween: 0,
           },
           600: {
             slidesPerView: 2,
@@ -69,7 +81,7 @@ const CustomSwiper = () => {
             spaceBetween: 16,
           },
           800: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 20,
           },
           1280: {
@@ -80,7 +92,7 @@ const CustomSwiper = () => {
         onSwiper={(swiper) => {
           setTimeout(() => swiper.navigation.update(), 100);
         }}
-        className="py-6"
+        className=""
       >
         {[
           {
@@ -127,13 +139,13 @@ const CustomSwiper = () => {
           },
         ].map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="bg-white px-6 py-4 rounded-xl shadow-md">
+            <div className="bg-white pl-5 pr-5 py-4 rounded-xl ">
               <Image
                 src={item.image}
                 alt={item.name}
                 width={200}
                 height={150}
-                className="rounded-lg w-full h-[150px] object-cover mb-2"
+                className="rounded-lg w-full h-full object-cover mb-2"
               />
               <div>
                 <h3 className="text-md font-semibold mb-1 text-left">
@@ -151,7 +163,7 @@ const CustomSwiper = () => {
                 <p className="text-base font-bold mb-2 text-gray-800 text-left">
                   {item.price}
                 </p>
-                <button className="bg-gradient-to-b from-[#FF7A7A] via-[#FB693B] to-[#F65900] hover:from-[#d86868] hover:via-[#dc5c35] hover:to-[#d25005] text-white py-2 rounded text-sm font-medium w-full">
+                <button className="bg-[#FB693B] hover:bg-[#d64f00] text-white cursor-pointer py-2 rounded text-sm font-medium w-full">
                   Order Now
                 </button>
               </div>

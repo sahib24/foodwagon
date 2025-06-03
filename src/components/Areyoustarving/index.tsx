@@ -70,8 +70,7 @@ export default function Navbar() {
               />
             </div>
             <button
-              className="bg-gradient-to-b from-[#FF7A7A] via-[#FB693B] to-[#F65900]
-             hover:from-[#d86868] hover:via-[#dc5c35] hover:to-[#d25005]
+              className="bg-[#FB693B] hover:bg-[#d64f00]
              transition-all duration-300
              cursor-pointer flex items-center justify-center text-white py-2 rounded font-medium gap-1 text-[16px] px-4"
             >

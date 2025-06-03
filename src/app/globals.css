@@ -5,3 +5,7 @@
 .custom-container {
   @apply px-5 md:px-10 lg:px-10 xl:px-30;
 }
+
+.custom-shadow:hover {
+  box-shadow: 0 4px 6px -1px #faaa01, 0 2px 4px -2px #faaa01;
+}
