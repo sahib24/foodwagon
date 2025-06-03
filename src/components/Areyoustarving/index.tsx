@@ -69,7 +69,12 @@ export default function Navbar() {
                 className="bg-transparent outline-none text-gray-700 text-sm w-full"
               />
             </div>
-            <button className="bg-gradient-to-b from-[#FF7A7A] cursor-pointer via-[#FB693B] to-[#F65900] flex items-center justify-center text-white py-2 rounded font-medium gap-1 text-[16px] px-4">
+            <button
+              className="bg-gradient-to-b from-[#FF7A7A] via-[#FB693B] to-[#F65900]
+             hover:from-[#d86868] hover:via-[#dc5c35] hover:to-[#d25005]
+             transition-all duration-300
+             cursor-pointer flex items-center justify-center text-white py-2 rounded font-medium gap-1 text-[16px] px-4"
+            >
               <Image
                 src="/AreYou/search.png"
                 alt="search icon"

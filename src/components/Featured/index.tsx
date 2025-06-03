@@ -85,14 +85,17 @@ const FeaturedRestaurants = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {restaurants.map((restaurant) => (
           <div key={restaurant.id} className="rounded overflow-hidden">
-            <div className="relative mb-6">
-              <Image
-                src={restaurant.image}
-                alt={restaurant.name}
-                width={500}
-                height={300}
-                className="w-full h-full rounded hover:scale-105 transition duration-300"
-              />
+            <div className="relative mb-6 rounded-lg ">
+              <div className="overflow-hidden rounded-2xl">
+                {" "}
+                <Image
+                  src={restaurant.image}
+                  alt={restaurant.name}
+                  width={500}
+                  height={300}
+                  className="w-full h-full  hover:scale-105 transition duration-300"
+                />
+              </div>
               <div className="absolute top-3 left-3 space-x-2 flex">
                 <span className="bg-orange-500 text-white text-xs font-semibold px-2 py-1 rounded">
                   {restaurant.offer}
@@ -135,7 +138,7 @@ const FeaturedRestaurants = () => {
       </div>
 
       <div className="text-center mt-10">
-        <button className="bg-gradient-to-r cursor-pointer from-yellow-400 mb-6 to-orange-400 text-white font-semibold px-6 py-2 rounded   ">
+        <button className="bg-gradient-to-r cursor-pointer mb-6 from-[#FFBA26]  to-[#FF9A0E]  hover:from-[#ea8e0d] hover:to-[#FFBA26] text-white font-semibold px-6 py-2 rounded   ">
           View All &gt;
         </button>
       </div>

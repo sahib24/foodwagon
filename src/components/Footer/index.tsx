@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col-reverse md:flex-row justify-between sm:gap-10 py-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:mb-0 mb-8 w-full md:w-2/3">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:mb-0 mb-8 w-full md:w-2/3">
             <div>
               <h5 className="text-[20px] text-white mb-4">Company</h5>
               <ul className="space-y-1">
@@ -104,7 +104,7 @@ export default function Footer() {
                   className="bg-transparent outline-none text-white placeholder-gray-400 w-full"
                 />
               </div>
-              <button className="bg-gradient-to-r from-yellow-500 cursor-pointer to-orange-500 text-white font-semibold px-4 py-2 rounded transition">
+              <button className="bg-gradient-to-r from-[#FFBA26]  to-[#FF9A0E]  hover:from-[#ea8e0d] hover:to-[#FFBA26] cursor-pointer  text-white font-semibold px-4 py-2 rounded transition">
                 Subscribe
               </button>
             </div>

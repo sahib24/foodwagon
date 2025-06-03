@@ -13,7 +13,7 @@ const FoodCards = () => {
             Enjoy the large size of sandwiches. Complete perfect slice of
             sandwiches.
           </p>
-          <button className="bg-gradient-to-r from-yellow-400 mb-6 cursor-pointer to-orange-400 text-white font-semibold px-6 py-2 rounded ">
+          <button className="bg-gradient-to-r from-[#FFBA26]  to-[#FF9A0E]  hover:from-[#ea8e0d] hover:to-[#FFBA26] mb-6 cursor-pointer text-white font-semibold px-6 py-2 rounded ">
             Proceed to order
           </button>
         </div>
@@ -37,7 +37,7 @@ const FoodCards = () => {
             Get the best fried chicken smeared with a lip smacking lemon chili
             flavor. Check out best deals for fried chicken.
           </p>
-          <button className="bg-gradient-to-r from-yellow-400 mb-6 cursor-pointer to-orange-400 text-white font-semibold px-6 py-2 rounded ">
+          <button className="bg-gradient-to-r from-[#FFBA26]  to-[#FF9A0E]  hover:from-[#ea8e0d] hover:to-[#FFBA26]  mb-6 cursor-pointer text-white font-semibold px-6 py-2 rounded ">
             Proceed to order
           </button>
         </div>
@@ -61,7 +61,7 @@ const FoodCards = () => {
             Pair up with a friend and enjoy the hot and crispy pizza pops. Try
             it with the best deals.
           </p>
-          <button className="bg-gradient-to-r from-yellow-400 mb-6 cursor-pointer to-orange-400 text-white font-semibold px-6 py-2 rounded ">
+          <button className="bg-gradient-to-r from-[#FFBA26]  to-[#FF9A0E]  hover:from-[#ea8e0d] hover:to-[#FFBA26]  mb-6 cursor-pointer text-white font-semibold px-6 py-2 rounded ">
             Proceed to order
           </button>
         </div>

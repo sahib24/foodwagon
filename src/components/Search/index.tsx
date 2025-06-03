@@ -61,7 +61,7 @@ export default function FoodCarousel() {
           prevEl: ".swiper-button-prev-custom",
         }}
         breakpoints={{
-          0: { slidesPerView: 2 },
+          0: { slidesPerView: 3 },
           480: { slidesPerView: 3 },
           640: { slidesPerView: 4 },
           768: { slidesPerView: 4 },
