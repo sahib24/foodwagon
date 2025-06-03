@@ -11,9 +11,9 @@ export default function Navbar() {
   };
 
   return (
-    <div className="custom-container py-5">
-      <div className="flex flex-col lg:flex-row md:items-center md:justify-between">
-        <div className="flex justify-center md:justify-start sm:mb-2">
+    <div className="custom-container px-4 py-4 md:py-5">
+      <div className="flex flex-col gap-4 md:gap-6 lg:flex-row md:items-center md:justify-between w-full">
+        <div className="flex justify-center md:justify-start">
           <Image
             src="/navbar/foodwagon.png"
             alt="foodwagon Logo"
@@ -23,29 +23,28 @@ export default function Navbar() {
           />
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-1 text-sm sm:mb-2 text-black text-center ">
+        <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 text-sm text-center text-black">
           <p className="text-[14px] font-bold">Deliver to:</p>
           <Image src="/navbar/map.png" alt="map icon" width={15} height={15} />
           <p className="text-gray-500 text-[14px]">Current Location</p>
-          <p className="font-bold ml-1 text-gray-800 text-[14px]">
+          <p className="font-bold text-gray-800 text-[14px]">
             Mohammadpur Bus Stand, Dhaka
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto justify-center md:justify-end relative">
+        <div className="flex flex-col sm:flex-row items-center gap-2 w-full md:w-auto justify-center md:justify-end relative">
           <div
-            className={`transition-all duration-600 transform ${
+            className={`transition-all duration-500 transform ${
               showSearch
-                ? "opacity-100 translate-x-0 max-w-[240px]"
-                : "opacity-0 -translate-x-10 max-w-0"
-            } overflow-hidden w-full relative`}
+                ? "opacity-100 translate-x-0 w-[255px]"
+                : "opacity-0 -translate-x-10 w-0"
+            } overflow-hidden relative`}
           >
             <input
               type="text"
               placeholder="Search food..."
-              className="pl-2 pr-20 py-1 rounded border border-[#ffb30e6a] text-[14px] placeholder:text-gray-400 w-full"
+              className="pl-2 py-2 rounded border border-[#ffb30e6a] text-[14px] placeholder:text-gray-500 w-full"
             />
-
             <button
               onClick={handleSearchToggle}
               className="absolute right-2 top-1/2 -translate-y-1/2 text-[14px] hover:text-orange-500 transition font-bold cursor-pointer"
