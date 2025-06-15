@@ -40,10 +40,10 @@ const CustomSwiper = () => {
         </button>
       </div>
 
-      <div className="absolute top-1/2 xl:right-8 md:right-0 z-10 -right-3 hover:custom-shadow:hover">
+      <div className="absolute top-1/2 xl:right-8 md:right-0 z-10 -right-3">
         <button
           ref={nextRef}
-          className="text-white w-fit h-auto rounded-full flex items-center justify-center cursor-pointer "
+          className="text-white w-fit h-auto rounded-full shadow hover:custom-shadow flex items-center justify-center cursor-pointer "
         >
           <Image
             src="/search/right.png"

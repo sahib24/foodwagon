@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-col-reverse md:flex-row justify-between  py-10">
-        <div className="grid grid-cols-2 md:grid-cols-3  sm:mb-0 mb-8  ">
+        <div className="grid grid-cols-2 md:grid-cols-3  mb-8  ">
           <div>
             <h5 className="text-[20px] text-white mb-4">Company</h5>
             <ul className="space-y-1">
